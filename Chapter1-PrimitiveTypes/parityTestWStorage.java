@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class parityTest {
+public class parityTestWStorage {
 
     public static short parity(long x){
     	short result = 0;
@@ -15,11 +15,11 @@ public class parityTest {
 	Scanner user_input = new Scanner( System.in );
 
 	short inputParity;
+	System.out.print(parity(inputParity));
 
-    System.out.print("Enter your interger check:");
-    inputParity = user_input.nextShort();
-    System.out.print(parity(inputParity));
-		 
-   }
+	    System.out.print("Enter your interger check or type exit to leave:");
+	    inputParity = user_input.next();
+	    System.out.print(parity(inputParity));
+   
    
 }
