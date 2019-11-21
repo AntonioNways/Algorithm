@@ -22,6 +22,7 @@ public class parityTest {
 		checkInput = user_input.hasNextShort();
 		inputParity = user_input.next();
 		if(checkInput) System.out.println("Parity value = " + parity(Short.parseShort(inputParity)));
+		if(inputParity == "Exit") user_input.close();
     	
 	}
    }
