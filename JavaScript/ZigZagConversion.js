@@ -4,3 +4,29 @@
 // A P L Q I I G
 // Y   I   T
 //And then read line by line: "SAHNAPLQIIGYIT"
+
+
+/**
+ * @param {string} s
+ * @param {number} numRows
+ * @return {string}
+ */
+
+var convert = function(s, numRows) {
+    let rowObj = {};
+    let counter = 1;
+    let m = 1;
+    for(var n = 0; n < s.length; n++){
+        if(!rowObj[counter]) rowObj[counter] =''
+        rowObj[counter] = rowObj[counter] + s.substr(n,1)
+        counter = counter + 1* m; 
+        if(counter == numRows || counter == 1 ){
+            m = m*(-1);
+        }
+    }
+    let ans = '';
+    Object.keys(rowObj).forEach(function(key){
+        ans = ans + rowObj[key];
+    })
+    return ans;
+};
