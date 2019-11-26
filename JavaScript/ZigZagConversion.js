@@ -13,7 +13,9 @@
  */
 
 var convert = function(s, numRows) {
+    if(numRows === 1) return s;
     let rowObj = {};
+    let ans = '';
     let counter = 1;
     let m = 1;
     for(var n = 0; n < s.length; n++){
@@ -24,7 +26,6 @@ var convert = function(s, numRows) {
             m = m*(-1);
         }
     }
-    let ans = '';
     Object.keys(rowObj).forEach(function(key){
         ans = ans + rowObj[key];
     })
