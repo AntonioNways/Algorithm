@@ -13,7 +13,7 @@
  */
 
 var convert = function(s, numRows) {
-    if(numRows === 1) return s;
+    if(s.length <= numRows) return s;
     let rowObj = {};
     let ans = '';
     let counter = 1;
